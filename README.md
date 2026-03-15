@@ -1,57 +1,60 @@
-# Sample Hardhat 3 Beta Project (`mocha` and `ethers`)
+# 🚀 Portafolio Blockchain – Solidity
 
-This project showcases a Hardhat 3 Beta project using `mocha` for tests and the `ethers` library for Ethereum interactions.
+Este repositorio documenta mi progreso en el desarrollo de **contratos inteligentes con Solidity** y el uso del framework **Hardhat**.  
+El portafolio está organizado en fases, mostrando una evolución clara desde conceptos básicos hasta contratos avanzados con roles, permisos y eventos.
 
-To learn more about the Hardhat 3 Beta, please visit the [Getting Started guide](https://hardhat.org/docs/getting-started#getting-started-with-hardhat-3). To share your feedback, join our [Hardhat 3 Beta](https://hardhat.org/hardhat3-beta-telegram-group) Telegram group or [open an issue](https://github.com/NomicFoundation/hardhat/issues/new) in our GitHub issue tracker.
+---
 
-## Project Overview
+## 📖 Índice
+1. [Fase 0 – Setup inicial](#fase-0--setup-inicial)
+2. [Fase 1 – Contratos básicos](#fase-1--contratos-básicos)
+3. [Fase 2 – Configuración Hardhat](#fase-2--configuración-hardhat)
+4. [Fase 3 – Contratos avanzados](#fase-3--contratos-avanzados)
+5. [Próximos pasos](#próximos-pasos)
+6. [Estructura del repositorio](#estructura-del-repositorio)
+7. [Autor](#autor)
 
-This example project includes:
+---
 
-- A simple Hardhat configuration file.
-- Foundry-compatible Solidity unit tests.
-- TypeScript integration tests using `mocha` and ethers.js
-- Examples demonstrating how to connect to different types of networks, including locally simulating OP mainnet.
+## 🔹 Fase 0 – Setup inicial
+Configuración del entorno de trabajo con **Hardhat** y TypeScript:
+- `hardhat.config.ts` → configuración principal.
+- `package.json` / `package-lock.json` → dependencias.
+- `tsconfig.json` → soporte para TypeScript.
+- `.gitignore` → exclusiones de archivos innecesarios.
 
-## Usage
+---
 
-### Running Tests
+## 🔹 Fase 1 – Contratos básicos
+Contratos iniciales para comprender la sintaxis de Solidity y la lógica fundamental:
+- **Contador.sol** → Incrementa y lee un valor almacenado.
+- **HolaBlockchain.sol** → Primer contrato de prueba con mensajes.
+- **TokenSimple.sol** → Token ERC20-like básico para balances y transferencias.
 
-To run all the tests in the project, execute the following command:
+---
 
-```shell
-npx hardhat test
-```
+## 🔹 Fase 2 – Configuración Hardhat
+Implementación de un entorno profesional de desarrollo:
+- Carpeta `contracts/` para contratos inteligentes.
+- Carpeta `scripts/` para despliegues automatizados.
+- Carpeta `test/` para pruebas unitarias.
+- Integración con **TypeScript** para mayor robustez.
 
-You can also selectively run the Solidity or `mocha` tests:
+---
 
-```shell
-npx hardhat test solidity
-npx hardhat test mocha
-```
+## 🔹 Fase 3 – Contratos avanzados
+Contratos con funcionalidades extendidas:
+- **Propietario.sol** → Gestión de roles y permisos.
+- **RegistroEventos.sol** → Almacenamiento y consulta de eventos en blockchain.
+- **TokenAvanzado.sol** → Token con roles, restricciones y emisión controlada.
 
-### Make a deployment to Sepolia
+---
 
-This project includes an example Ignition module to deploy the contract. You can deploy this module to a locally simulated chain or to Sepolia.
+## 🔹 Próximos pasos
+- **Fase 4**: Automatización de pruebas con Hardhat + Chai.  
+- **Fase 5**: Despliegues en testnets (Goerli, Sepolia).  
+- **Fase 6**: Integración con frontend (React + Web3).  
 
-To run the deployment to a local chain:
+---
 
-```shell
-npx hardhat ignition deploy ignition/modules/Counter.ts
-```
-
-To run the deployment to Sepolia, you need an account with funds to send the transaction. The provided Hardhat configuration includes a Configuration Variable called `SEPOLIA_PRIVATE_KEY`, which you can use to set the private key of the account you want to use.
-
-You can set the `SEPOLIA_PRIVATE_KEY` variable using the `hardhat-keystore` plugin or by setting it as an environment variable.
-
-To set the `SEPOLIA_PRIVATE_KEY` config variable using `hardhat-keystore`:
-
-```shell
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY
-```
-
-After setting the variable, you can run the deployment with the Sepolia network:
-
-```shell
-npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
-```
+## 📂 Estructura del repositorio
